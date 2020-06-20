@@ -15,15 +15,22 @@
                 function playRound(playerSelection, computerSelection) {
                     playerSelection = playerSelection.toLowerCase()
                     computerSelection = computerSelection.toLowerCase()
+                    
                     if (playerSelection == computerSelection) {
                         i--
                         return 'You have tied! Play again.';
-                    } else if ((playerSelection == 'rock' && computerSelection == 'scissors') | (playerSelection == 'paper' && computerSelection == 'rock') || (playerSelection == 'scissors' && computerSelection == 'paper')) {
+
+                    } else if ((playerSelection == 'rock' && computerSelection == 'scissors') || 
+                        (playerSelection == 'paper' && computerSelection == 'rock') || 
+                        (playerSelection == 'scissors' && computerSelection == 'paper')) {
                         yourScore++
-                        return `Yes! ${playerSelection.toUpperCase()} beats ${computerSelection.toUpperCase()}.`;
+                        return `Yes! ${playerSelection.toUpperCase()} beats 
+                        ${computerSelection.toUpperCase()}.`;
+
                     } else {
                         computerScore++
-                        return `Ouch... ${computerSelection.toUpperCase()} beats ${playerSelection.toUpperCase()}.`;
+                        return `Ouch... ${computerSelection.toUpperCase()} beats 
+                        ${playerSelection.toUpperCase()}.`;
                     }
                 }
 
